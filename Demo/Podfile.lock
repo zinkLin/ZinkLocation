@@ -1,0 +1,10 @@
+PODS:
+  - ZinkAlertActionSheet (1.0.0)
+
+DEPENDENCIES:
+  - ZinkAlertActionSheet (~> 1.0.0)
+
+SPEC CHECKSUMS:
+  ZinkAlertActionSheet: 6e9c3cde173a880d2f219aa6111c2994186e33aa
+
+COCOAPODS: 0.39.0
