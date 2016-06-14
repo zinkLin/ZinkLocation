@@ -9,5 +9,5 @@ s.source = { :git => "https://github.com/zinkLin/ZinkAlertActionSheet", :tag => 
 s.requires_arc = true
 s.ios.deployment_target = '7.0'
 s.source_files = "ZinkAlertActionSheet/*"
-s.dependency "ZinkAlertActionSheet"
+s.dependency = "ZinkAlertActionSheet"
 end
