@@ -8,7 +8,7 @@ s.authors = { 'Zink' => '418175138@qq.com' }
 s.source = { :git => "https://github.com/zinkLin/ZinkLocation", :tag => "1.0.2"}
 s.requires_arc = true
 s.ios.deployment_target = '7.0'
-s.source_files = "ZinkLocation/*"
+s.source_files = "ZinkLocationHelper/*"
 s.dependency 'ZinkAlertActionSheet'
 s.dependency 'ZinkManager'
 end
