@@ -90,12 +90,10 @@ static NSString *kIsReminded = @"kIsReminded";
                                               }];
 }
 
-
 #pragma mark private
 + (ZinkLocation *)shareInstance {
     static dispatch_once_t predicate;
     static ZinkLocation *location;
-    
     dispatch_once(&predicate, ^{
         location = [ZinkLocation new];
         location.geocoder = [[CLGeocoder alloc] init];
@@ -109,7 +107,6 @@ static NSString *kIsReminded = @"kIsReminded";
     // 设置定位精度，十米，百米，最好
     [locationManager setDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
     locationManager.delegate = self;
-
     if ([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
         [locationManager requestWhenInUseAuthorization];
     }
@@ -135,7 +132,6 @@ static NSString *kIsReminded = @"kIsReminded";
     BOOL isReminded = [[ZinkManager zinkLoadStringByKey:kIsReminded] boolValue];
     if (!isReminded) {
         [ZinkManager zinkSaveString:@(YES).stringValue byKey:kIsReminded];
-        
         [ZinkAlertActionSheet zinkAlertShowInController:[UIApplication sharedApplication].keyWindow.rootViewController
                                                   title:@"定位失败"
                                                 message:@"是否前往系统设置开启定位权限"
