@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		CE8D890AD67937DDBA4841DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43AFA1150BC15132A7B31657 /* libPods.a */; };
+		D1DB8E501D2B60B400CE5E0F /* ZinkLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D1DB8E4F1D2B60B400CE5E0F /* ZinkLocation.m */; };
 		D1DBF8DF1D0FFAD300360668 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1DBF8DE1D0FFAD300360668 /* main.m */; };
 		D1DBF8E21D0FFAD300360668 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1DBF8E11D0FFAD300360668 /* AppDelegate.m */; };
 		D1DBF8E51D0FFAD300360668 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1DBF8E41D0FFAD300360668 /* ViewController.m */; };
 		D1DBF8E81D0FFAD300360668 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1DBF8E61D0FFAD300360668 /* Main.storyboard */; };
 		D1DBF8EA1D0FFAD300360668 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1DBF8E91D0FFAD300360668 /* Assets.xcassets */; };
 		D1DBF8ED1D0FFAD300360668 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1DBF8EB1D0FFAD300360668 /* LaunchScreen.storyboard */; };
-		D1DBF8F71D0FFB0A00360668 /* ZinkLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D1DBF8F61D0FFB0A00360668 /* ZinkLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		43AFA1150BC15132A7B31657 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		80AEA52DB776E2FC542BD492 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C5FEF5B43838E408A764B486 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D1DB8E4E1D2B60B400CE5E0F /* ZinkLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZinkLocation.h; sourceTree = "<group>"; };
+		D1DB8E4F1D2B60B400CE5E0F /* ZinkLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZinkLocation.m; sourceTree = "<group>"; };
 		D1DBF8DA1D0FFAD300360668 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1DBF8DE1D0FFAD300360668 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D1DBF8E01D0FFAD300360668 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,8 +33,6 @@
 		D1DBF8E91D0FFAD300360668 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1DBF8EC1D0FFAD300360668 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1DBF8EE1D0FFAD300360668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D1DBF8F51D0FFB0A00360668 /* ZinkLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZinkLocation.h; sourceTree = "<group>"; };
-		D1DBF8F61D0FFB0A00360668 /* ZinkLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZinkLocation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +64,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D1DB8E4D1D2B60B400CE5E0F /* ZinkLocation */ = {
+			isa = PBXGroup;
+			children = (
+				D1DB8E4E1D2B60B400CE5E0F /* ZinkLocation.h */,
+				D1DB8E4F1D2B60B400CE5E0F /* ZinkLocation.m */,
+			);
+			name = ZinkLocation;
+			path = ../../ZinkLocation;
+			sourceTree = "<group>";
+		};
 		D1DBF8D11D0FFAD300360668 = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +95,7 @@
 		D1DBF8DC1D0FFAD300360668 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				D1DBF8F41D0FFB0A00360668 /* ZinkLocation */,
+				D1DB8E4D1D2B60B400CE5E0F /* ZinkLocation */,
 				D1DBF8E01D0FFAD300360668 /* AppDelegate.h */,
 				D1DBF8E11D0FFAD300360668 /* AppDelegate.m */,
 				D1DBF8E31D0FFAD300360668 /* ViewController.h */,
@@ -105,15 +115,6 @@
 				D1DBF8DE1D0FFAD300360668 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D1DBF8F41D0FFB0A00360668 /* ZinkLocation */ = {
-			isa = PBXGroup;
-			children = (
-				D1DBF8F51D0FFB0A00360668 /* ZinkLocation.h */,
-				D1DBF8F61D0FFB0A00360668 /* ZinkLocation.m */,
-			);
-			path = ZinkLocation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,7 +240,7 @@
 			files = (
 				D1DBF8E51D0FFAD300360668 /* ViewController.m in Sources */,
 				D1DBF8E21D0FFAD300360668 /* AppDelegate.m in Sources */,
-				D1DBF8F71D0FFB0A00360668 /* ZinkLocation.m in Sources */,
+				D1DB8E501D2B60B400CE5E0F /* ZinkLocation.m in Sources */,
 				D1DBF8DF1D0FFAD300360668 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
