@@ -1,3 +1,4 @@
 platform :ios,'7.0'
 
-pod 'ZinkAlertActionSheet', '~> 1.0.0'
+pod 'ZinkAlertActionSheet'
+pod 'ZinkManager'

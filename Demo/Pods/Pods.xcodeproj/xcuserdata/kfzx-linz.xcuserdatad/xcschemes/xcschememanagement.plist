@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -14,15 +19,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ZinkManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>16CF86F9782BA34DAE2A061C21972DE9</key>
+		<key>0B821DE0FE5DAC6D906289E772A0A503</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>71EA3D4C5E0C9B2C809362CF183B1326</key>
+		<key>8DCA5347C23905732A9F2926243BB6CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D4E48A7BEC07833308A0E1812440A9BC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE2F1D7B9D9FCEA148517E4657B243F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

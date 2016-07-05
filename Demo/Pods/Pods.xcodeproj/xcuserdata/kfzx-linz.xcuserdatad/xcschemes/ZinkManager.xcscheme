@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '20E3D2C405492C69D9FF5433'
-               BlueprintName = 'Pods'
+               BlueprintIdentifier = '2C87AA0FE0E84C89537646AA'
+               BlueprintName = 'ZinkManager'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods.a'>
+               BuildableName = 'libZinkManager.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

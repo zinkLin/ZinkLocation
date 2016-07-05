@@ -8,7 +8,10 @@
 
 #import "ZinkLocation.h"
 #import <MapKit/MapKit.h>
+#import "ZinkManager+Storage.h"
 #import "ZinkAlertActionSheet.h"
+
+static NSString *kIsReminded = @"kIsReminded";
 
 @interface ZinkLocation()<CLLocationManagerDelegate>
 
@@ -128,20 +131,27 @@
 #pragma mark CLLocationManagerDelegate
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     __weak typeof(self) weakSelf = self;
-    [ZinkAlertActionSheet zinkAlertWithTitle:@"定位失败"
-                                     message:@"是否前往系统设置开启定位权限"
-                                cancelButton:@"取消"
-                                otherButtons:@[@"确定"]
-                                    callBack:^(NSInteger index) {
-                                        if (index == 0) {
-                                            if (self.coordinateBlock) {
-                                                weakSelf.coordinateBlock(0,0,error);
-                                                weakSelf.coordinateBlock = nil;
-                                            }
-                                        } else {
-                                            [weakSelf requestForAuthority];
-                                        }
-                                    }];
+    
+    BOOL isReminded = [[ZinkManager zinkLoadStringByKey:kIsReminded] boolValue];
+    if (!isReminded) {
+        [ZinkManager zinkSaveString:@(YES).stringValue byKey:kIsReminded];
+        
+        [ZinkAlertActionSheet zinkAlertShowInController:[UIApplication sharedApplication].keyWindow.rootViewController
+                                                  title:@"定位失败"
+                                                message:@"是否前往系统设置开启定位权限"
+                                           cancelButton:@"取消"
+                                           otherButtons:@[@"确定"]
+                                               callBack:^(NSInteger index) {
+                                                   if (index == 0) {
+                                                       if (self.coordinateBlock) {
+                                                           weakSelf.coordinateBlock(0,0,error);
+                                                           weakSelf.coordinateBlock = nil;
+                                                       }
+                                                   } else {
+                                                       [weakSelf requestForAuthority];
+                                                   }
+                                               }];
+    }
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
